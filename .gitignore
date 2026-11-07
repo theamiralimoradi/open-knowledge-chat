@@ -1,0 +1,38 @@
+# Environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*credentials*
+*secret*.json
+wp-config.php
+
+# Private data / exports / backups
+*.sql
+*.sql.gz
+*.sqlite
+*.db
+*.csv
+*.xlsx
+*.xls
+*.log
+*.bak
+*.backup
+*.tar.gz
+*.zip
+uploads/
+backups/
+logs/
+exports/
+
+# Editors and OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+__pycache__/
+*.pyc
+node_modules/
+vendor/
