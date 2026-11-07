@@ -1,0 +1,15 @@
+name: Static code checks
+on:
+  push:
+  pull_request:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: PHP syntax
+        run: php -l open-knowledge-chat.php
+      - name: JavaScript syntax
+        run: node --check assets/chat.js
+      - name: Release secret check
+        run: python3 scripts/check_release.py
